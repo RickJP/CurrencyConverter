@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26Y-2Z-a8v">
+                                <rect key="frame" x="30" y="168" width="136" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136" id="j5Y-0H-fqJ"/>
+                                    <constraint firstAttribute="width" constant="136" id="jnM-4g-dIG"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="mtf-a3-hcd"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="Efr-w2-au5"/>
+                                </connections>
+                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="05C-4k-Qul">
+                                <rect key="frame" x="89" y="117" width="194" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="amountChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="9Uk-Ws-n4T"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter amount to convert: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zar-6C-A9f">
+                                <rect key="frame" x="92" y="88" width="191" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBv-eY-x02">
+                                <rect key="frame" x="92" y="38" width="191" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView alpha="0.94999999999999996" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPd-Cm-G2y">
+                                <rect key="frame" x="206" y="168" width="137" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="k6y-1O-YEX"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="WCn-aC-azr"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="PXl-aS-POi"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Nn-bf-k0h">
+                                <rect key="frame" x="188" y="404" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29019607843137252" green="0.6705882352941176" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="26Y-2Z-a8v" firstAttribute="top" secondItem="05C-4k-Qul" secondAttribute="bottom" constant="21" id="0Wd-iu-lOg"/>
+                            <constraint firstItem="xBv-eY-x02" firstAttribute="leading" secondItem="zar-6C-A9f" secondAttribute="leading" id="BM6-vy-phs"/>
+                            <constraint firstItem="zar-6C-A9f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GeS-5f-l4e"/>
+                            <constraint firstItem="26Y-2Z-a8v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="La5-ZB-POD"/>
+                            <constraint firstItem="xBv-eY-x02" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="ZMK-1v-APL"/>
+                            <constraint firstItem="0Nn-bf-k0h" firstAttribute="centerX" secondItem="zar-6C-A9f" secondAttribute="centerX" id="e2n-Up-K0R"/>
+                            <constraint firstItem="0Nn-bf-k0h" firstAttribute="top" secondItem="26Y-2Z-a8v" secondAttribute="bottom" constant="20" id="gWP-ao-GSN"/>
+                            <constraint firstItem="xBv-eY-x02" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h9s-Hb-DG6"/>
+                            <constraint firstItem="xBv-eY-x02" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i07-j3-9RL"/>
+                            <constraint firstItem="zar-6C-A9f" firstAttribute="trailing" secondItem="05C-4k-Qul" secondAttribute="trailing" id="noR-uq-rit"/>
+                            <constraint firstItem="05C-4k-Qul" firstAttribute="top" secondItem="zar-6C-A9f" secondAttribute="bottom" constant="8" symbolic="YES" id="oRS-SH-q7s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UPd-Cm-G2y" secondAttribute="trailing" constant="32" id="pf3-Q1-4c6"/>
+                            <constraint firstItem="xBv-eY-x02" firstAttribute="trailing" secondItem="zar-6C-A9f" secondAttribute="trailing" id="q14-3f-6vw"/>
+                            <constraint firstItem="zar-6C-A9f" firstAttribute="top" secondItem="xBv-eY-x02" secondAttribute="bottom" constant="20" id="qkF-9R-hUO"/>
+                            <constraint firstItem="26Y-2Z-a8v" firstAttribute="top" secondItem="UPd-Cm-G2y" secondAttribute="top" id="vDd-to-fiu"/>
+                            <constraint firstItem="UPd-Cm-G2y" firstAttribute="leading" secondItem="26Y-2Z-a8v" secondAttribute="trailing" constant="40" id="wmM-xv-nQ2"/>
+                            <constraint firstItem="05C-4k-Qul" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="xA8-qB-5QN"/>
+                            <constraint firstItem="xBv-eY-x02" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="yP9-5G-5E6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountInTextField" destination="05C-4k-Qul" id="Or8-02-dXV"/>
+                        <outlet property="currencyInPicker" destination="26Y-2Z-a8v" id="tHL-0g-cP4"/>
+                        <outlet property="currencyOutPicker" destination="UPd-Cm-G2y" id="9vn-MP-ZIH"/>
+                        <outlet property="resultTextField" destination="0Nn-bf-k0h" id="s5R-8f-gjU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
